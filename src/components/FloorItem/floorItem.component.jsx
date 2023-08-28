@@ -8,10 +8,14 @@ export default function FloorItem() {
   const [floorSrc, setFloorSrc] = useState("");
   const [floorSold, setFloorSold] = useState(false);
   const [floorId , setFloorId ] = useState()
+  const [isPhotoChanging, setIsPhotoChanging] = useState(false);
+  const schemref = useRef(null)
+  
   function changeTop() {
     console.log("changed");
     firstBlock.current.style.transform = "translateY(-100vh)";
     secondBlock.current.style.transform = "translateY(-100vh)";
+    schemref.current.style.display = "flex"
   }
 
   const floorsSchem = [
@@ -99,27 +103,15 @@ export default function FloorItem() {
       id: 21,
       src: "",
     },
-    {
-      id: 22,
-      src: "",
-    },
-    {
-      id: 23,
-      src: "",
-    },
-    {
-      id: 24,
-      src: "",
-    },
-    {
-      id: 25,
-      src: "",
-    },
+    
   ];
 
   function showFloorPhoto(event) {
     const floorId = event.target.dataset.id;
-    setFloorId(floorId)
+    setFloorId(floorId);
+  
+    setIsPhotoChanging(true);
+  
     const floorSchem = floorsSchem.find((floor) => floor.id === parseInt(floorId));
     if (floorSchem.src === "") {
       setFloorSrc("Продано");
@@ -128,8 +120,12 @@ export default function FloorItem() {
       setFloorSrc(floorSchem.src);
       setFloorSold(false);
     }
+  
+    setTimeout(() => {
+      setIsPhotoChanging(false);
+    }, 300);
   }
-
+  
   return (
     <div className="floor_container">
       <div className="first_block" ref={firstBlock}>
@@ -155,27 +151,8 @@ export default function FloorItem() {
           </div>
         </Link>
 
-        <div className="schem_cont">
-          <div
-            className="floors"
-            data-id="25"
-            onClick={showFloorPhoto}
-          ></div>
-          <div
-            className="floors"
-            data-id="24"
-            onClick={showFloorPhoto}
-          ></div>
-          <div
-            className="floors"
-            data-id="23"
-            onClick={showFloorPhoto}
-          ></div>
-          <div
-            className="floors"
-            data-id="22"
-            onClick={showFloorPhoto}
-          ></div>
+        <div className="schem_cont" ref={schemref}>
+         
           <div
             className="floors"
             data-id="21"
@@ -288,7 +265,11 @@ export default function FloorItem() {
       {floorSold ? (
           <p className="sold">{floorSrc}</p>
         ) : (
-          <img src={floorSrc} alt="" />
+          <img
+          src={floorSrc}
+          alt=""
+          className={`floor_photo ${isPhotoChanging ? 'changing' : ''}`}
+        />
         )}
       </div>
       </div>

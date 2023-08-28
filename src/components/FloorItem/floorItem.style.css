@@ -9,6 +9,13 @@ overflow-y: auto;
 overflow: hidden;
 
 }
+.downcont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    flex-wrap: nowrap;
+}
 
 .back {
 display: flex;
@@ -51,6 +58,8 @@ transition: ease-in 350ms;
 transition: ease-in 1s;
 position: relative;
 
+z-index: 999;
+
 
    
 }
@@ -58,6 +67,7 @@ position: relative;
 text-align: center;
 font-size: 100px;
 animation: slideTop 1.5s ease-in-out;
+width: 100%;
 
 }
 
@@ -96,7 +106,8 @@ transition: ease-in 1s;
     position: absolute;
     right: 0;
     bottom: 100px;
-    z-index: -1;
+    z-index: 2;
+    display: none;
 
 
 }
@@ -121,7 +132,7 @@ transition: ease-in 1s;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 30px;
+    z-index: 1;
 }
 .floor_num{
     width: 40px;
@@ -176,13 +187,16 @@ transition: ease-in 1s;
 
     }
 }
-.schemas_content {
-    position: relative;
-    opacity: 0;
-    transition: opacity 0.5s;
+
+
+  .floor_photo {
+    transition: opacity 0.3s ease-out;
+    width: 500px;
+    height: 500px;
   }
   
-  .schemas_content.show {
-    opacity: 1;
+  .floor_photo.changing {
+    opacity: 0;
   }
+  
   

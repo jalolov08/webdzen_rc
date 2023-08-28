@@ -7,7 +7,7 @@ import FloorItem from '../components/FloorItem/floorItem.component'
 export default function Floors() {
   return (
     <div>
-        {/* <Header /> */}
+       
         <FloorItem />
     </div>
     

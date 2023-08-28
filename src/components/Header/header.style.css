@@ -1,18 +1,13 @@
+
 .header {
   height: 55px;
-  background-color: #3e3e44;
+  background-color: hsl(240, 5%, 25%);
   padding: 8px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo {
-  font-size: 24px;
-  color: #ebe2da;
- 
-  font-weight: 600;
-  margin: 0;
-  animation: fade 2s ease 10s infinite;
-  animation-delay: 2s;
-}
 
 .contacts {
   display: flex;
@@ -87,4 +82,18 @@
     transform: translateY(0);
     opacity: 100%;
   }
+}
+
+.nav_item{
+  display: inline;
+  font-size: 15px;
+  font-weight: 400;
+  color:#ebe2da;
+  margin: 0px 20px;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+.nav_item:hover{
+  transition: ease-in 0.3s;
+  opacity: 75%;
 }
