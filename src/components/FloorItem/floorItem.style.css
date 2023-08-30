@@ -1,5 +1,5 @@
 .floor_container {
-background-color: #ebe2da;
+background-color: #fff;
 height: 100vh;
 max-height: 100vh;
 padding: 0 80px;
@@ -30,7 +30,7 @@ animation: slideLeft 1.5s ease-in-out;
 }
 
 .back p {
-color: #3e3e44;
+color: #384256;
 text-align: center;
 margin-left: 20px;
 font-weight: 400;
@@ -39,8 +39,8 @@ font-weight: 400;
 .arico {
 margin-top: 2.5px;
 font-size: 23px;
-color: #3e3e44;
-background-color: #ebe2da;
+color:#384256 ;
+background-color: #fff;
 transition: ease-in 350ms;
 }
 
@@ -81,6 +81,7 @@ flex-wrap: wrap;
 .downico {
 font-size: 40px;
 margin-top: 250px;
+color: #384256;
 transition: ease-in 300ms;
 animation: slideBottom 1.5s ease-in-out;
 }
@@ -91,7 +92,7 @@ animation: slideBottom 1.5s ease-in-out;
 .second_block{
     width: 100%;
     height: 100vh;
-    background-color: #ebe2da;
+    background-color: #fff;
 transition: ease-in 1s;
 
    
@@ -99,7 +100,7 @@ transition: ease-in 1s;
 
 .schem_cont{
     width: 120px;
-    border: 1px solid black;
+    border: 1px solid #384256;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -114,7 +115,7 @@ transition: ease-in 1s;
 .floors{
     width: 85%;
     height: 10px;
-    border: 1px solid black;
+    border: 1px solid #384256;
 }
 .floors:last-child{
     width: 100%;
@@ -125,7 +126,7 @@ transition: ease-in 1s;
     top: -5px;
 }
 .floors:hover{
-    background-color: #3e3e44;
+    background-color: #384256;
 }
 .schemas_content{
     width: 100%;
@@ -138,7 +139,7 @@ transition: ease-in 1s;
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    border: 1px solid #3e3e44;
+    border: 1px solid #384256;
      display: flex;
      justify-content: center;
      align-items: center;

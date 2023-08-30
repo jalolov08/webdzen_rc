@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import "./floorItem.style.css";
 import { Link } from "react-router-dom";
 
+
 export default function FloorItem() {
   const firstBlock = useRef(null);
   const secondBlock = useRef(null);
@@ -10,7 +11,7 @@ export default function FloorItem() {
   const [floorId , setFloorId ] = useState()
   const [isPhotoChanging, setIsPhotoChanging] = useState(false);
   const schemref = useRef(null)
-  
+
   function changeTop() {
     console.log("changed");
     firstBlock.current.style.transform = "translateY(-100vh)";
@@ -21,31 +22,31 @@ export default function FloorItem() {
   const floorsSchem = [
     {
       id: 1,
-      src: "https://cdn-edge.kwork.ru/files/avatar/large_r/27/15004196-2.jpg",
+      src: "https://i.ibb.co/k9VJ07G/image-2.png",
     },
     {
       id: 2,
-      src: "https://sp-ao.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_500/https://dreamparkpro.com/wp-content/uploads/2023/04/cropped-image.png",
+      src: "https://i.ibb.co/Jxf9FSR/image-1.png",
     },
     {
       id: 3,
-      src: "",
+      src: "https://i.ibb.co/q5GzqkR/image-3.png",
     },
     {
       id: 4,
-      src: "https://cdn-edge.kwork.ru/files/avatar/large_r/27/15004196-2.jpg",
+      src: "https://i.ibb.co/k9VJ07G/image-2.png",
     },
     {
       id: 5,
-      src: "https://cdn-edge.kwork.ru/files/avatar/large_r/27/15004196-2.jpg",
+      src: "https://i.ibb.co/q5GzqkR/image-3.png",
     },
     {
       id: 6,
-      src: "https://cdn-edge.kwork.ru/files/avatar/large_r/27/15004196-2.jpg",
+      src: "https://i.ibb.co/Jxf9FSR/image-1.png",
     },
     {
       id: 7,
-      src: "",
+      src: "https://i.ibb.co/q5GzqkR/image-3.png",
     },
     {
       id: 8,
@@ -265,11 +266,13 @@ export default function FloorItem() {
       {floorSold ? (
           <p className="sold">{floorSrc}</p>
         ) : (
-          <img
-          src={floorSrc}
-          alt=""
-          className={`floor_photo ${isPhotoChanging ? 'changing' : ''}`}
-        />
+        <img
+  src={floorSrc}
+  alt=""
+  className={`floor_photo ${isPhotoChanging ? 'changing' : ''}`}
+  style={{ height: isPhotoChanging ? 0 : 'auto' }}
+/>
+
         )}
       </div>
       </div>

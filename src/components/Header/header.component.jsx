@@ -7,7 +7,7 @@ export default function Header() {
    <ul className='nav'>
     
    <Link to={"/"} style={{textDecoration:"none"}}> <li className='nav_item'>Главная</li></Link>
-    <li className='nav_item'>Посмотреть 3д</li>
+   <Link to={"/floors"} style={{textDecoration:"none"}}>  <li className='nav_item'>Выбор квартиры</li>  </Link>
     <li className='nav_item'>Контакты</li>
 
 

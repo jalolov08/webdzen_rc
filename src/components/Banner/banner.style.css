@@ -1,8 +1,8 @@
 .bannercont {
   display: flex;
   width: 100%;
-  background-color: #ebe2da;
-  transition: opacity 0.3s ease-in-out;
+  background-color: #fff;
+  transition: opacity 0.2s ease-in-out;
   overflow-y: scroll;
   scroll-behavior:smooth;
   
@@ -21,9 +21,11 @@
 
 .build path {
   opacity: 0;
+  
 }
 .build path:hover {
-  opacity: 1;
+  opacity: 50%;
+  
 }
 .build {
   position: relative;
@@ -81,9 +83,9 @@
   border: none;
   font-size: 20px;
   padding: 4px 25px;
-  color: #ebe2da;
-  background-color: #1a1510;
-  border: 1px solid #1a1510;
+  color: #fff;
+  background-color: #384256;
+  border: 1px solid #384256;
   border-radius: 5px;
   margin-top: 15px;
   transition: ease-in-out 0.3s;
@@ -92,6 +94,6 @@
 .see_floors:hover{
   transition: ease-in 0.3s;
 
-  background-color: #ebe2da;
-  color: #1a1510;
+  background-color: #fff;
+  color: #384256;
 }

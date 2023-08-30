@@ -120,7 +120,7 @@ export default function Banner() {
     setTimeout(() => {
       setSelectedFloor(floor);
       setIsAnimating(false);
-    }, 300); 
+    }, 200); 
   };
 
   const handleFloorClick = (event) => {
