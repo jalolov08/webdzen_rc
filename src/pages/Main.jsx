@@ -3,6 +3,8 @@ import React, { Suspense } from 'react'
 import Header from '../components/Header/header.component'
 import Banner from '../components/Banner/banner.component'
 import Footer from '../components/Footer/footer.component'
+import AboutRc from '../components/AboutRC/aboutrc.component'
+import SliderComponent from '../components/Slider/slider.component'
 
 
 
@@ -14,6 +16,10 @@ export default function Main() {
 
 
       <Banner />
+      <AboutRc />
+    <div style={{width:"100%" , padding:"80px"}}>
+    <SliderComponent />
+    </div>
       <Footer />
     {/* <Canvas>
       
