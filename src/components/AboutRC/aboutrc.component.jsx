@@ -1,34 +1,48 @@
 import React from "react";
+import { useSpring, animated } from "react-spring";
 import "./aboutrc.style.css";
+import rc from '../../assets/rc.jpg';
+import RcText from "../RCText/rctext.component";
+
 export default function AboutRc() {
-    const benefits = [
-        {id:1 ,  text:"Комарово парк — перспективный развивающийся район "},
-        {id:2 ,  text:"Комплекс состоит из 14 домов"},
-        {id:3 ,  text:"5 минут пешком до будущих школ, детских садов и больницы  "},
-        {id:4 ,  text:"Подземный паркинг — авто в тепле 24/7 "},
-        {id:5 ,  text:"Красивая архитектура "},
-        {id:6 ,  text:"37 Га парков и скверов "},
+  const benefits = [
+    { id: 1, text: "Комарово парк — перспективный развивающийся район" },
+    { id: 2, text: "Комплекс состоит из 14 домов" },
+    { id: 3, text: "5 минут пешком до будущих школ, детских садов и больницы" },
+    { id: 4, text: "Подземный паркинг — авто в тепле 24/7" },
+    { id: 5, text: "Красивая архитектура" },
+    { id: 6, text: "37 Га парков и скверов" },
+  ];
 
+  const fade = useSpring({ opacity: 1, from: { opacity: 0 } });
+  const slideIn = useSpring({
+    transform: "translateX(0%)",
+    from: { transform: "translateX(-200%)" },
+    config: { tension: 200, friction: 20 }, 
+  });
 
-        
-
-    ]
   return (
-    <div className="aboutrc">
-      <div className="texts">
+    <animated.div className="aboutrc" style={slideIn}>
+      <animated.div className="texts" style={fade}>
+        <div>
         <h1 className="about_heading">
-          Жилой комплекс в сердце нового района «Комарово парк»{" "}
+          Жилой комплекс в сердце нового района «Комарово парк»
         </h1>
-        <div className="benefits_cont">
-    {benefits.map(el => (
-        <div key={el.id} className="benefit_card">
-            <i class="fa-solid fa-square-check chck"></i>
-            <p>{el.text}</p>
+
+    <div style={{display:"flex" , flexWrap:"wrap" }}>
+    <div className="benefits_cont">
+          {benefits.map((el) => (
+            <div key={el.id} className="benefit_card" style={fade}>
+              <i className="fa-solid fa-square-check chck"></i>
+              <p>{el.text}</p>
             </div>
-    ))}
+          ))}
         </div>
-      </div>
-      <img className="aboutrc_img" src="https://b-72.ru/upload/resize_cache/iblock/ff9/1200_1200_1/ff966e37555c885ce0c1e0dc50979999.jpg" />
+      <RcText /> 
     </div>
+        </div>
+      </animated.div>
+      <animated.img className="aboutrc_img" src={rc} style={fade} />
+    </animated.div>
   );
 }

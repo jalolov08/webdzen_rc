@@ -130,7 +130,7 @@ export default function FloorItem() {
   return (
     <div className="floor_container">
       <div className="first_block" ref={firstBlock}>
-        <Link to={"/"}>
+        <Link to={"/home"}>
           <div className="back">
             <i className="fa-solid fa-circle-arrow-left arico" />
             <p>Назад</p>
@@ -145,7 +145,7 @@ export default function FloorItem() {
       </div>
 
       <div className="second_block" ref={secondBlock}>
-        <Link to={"/"}>
+        <Link to={"/home"}>
           <div className="back">
             <i className="fa-solid fa-circle-arrow-left arico" />
             <p>Назад</p>

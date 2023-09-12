@@ -1,0 +1,32 @@
+.rctext_cont {
+    width: 100%;
+    display: flex;
+    padding: 0px 80px;
+  justify-content: space-between;
+
+   
+}
+
+.rctext_h{
+    font-size: 24px;
+}
+.rc_top{
+    font-size: 14px;
+    font-weight: normal;
+    color: #8a909b;
+    margin: 0px;
+}
+.rc_main{
+    color: #384256;
+    font-size: 18px;
+    font-weight: 700;
+}
+.rctexts_cont{
+  
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px rgba(86, 86, 86, 0.77) solid;
+  
+
+}

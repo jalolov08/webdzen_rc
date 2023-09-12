@@ -16,6 +16,7 @@
   background-image: url("https://i.yourimageshare.com/Uzg3pmuMCW.webp");
   width: 984.525px;
   height: 1080px;
+  border-radius: 5px;
   animation: slideLeft 1.5s ease-in-out;
 }
 
@@ -51,37 +52,38 @@
 }
 .content{
   height: 100%;
- 
+ padding-left: 25px;
   margin:auto;
 }
+
 .select_floor{
-  font-size: 50px;
+  font-size: 52px;
   font-weight: 500;
   margin: 0;
 }
 .floor_number{
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 500;
   margin: 0;
 }
 .floor_apartaments{
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 400;
   margin: 0;
 
 }
 .floor_area{
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 400;
   margin: 0;
 }
 .zero_apartaments{
-  font-size: 18;
+  font-size: 20;
   font-weight: 600;
 }
 .see_floors{
   border: none;
-  font-size: 20px;
+  font-size: 22px;
   padding: 4px 25px;
   color: #fff;
   background-color: #384256;
@@ -96,4 +98,8 @@
 
   background-color: #fff;
   color: #384256;
+}
+.floor_image{
+  width: 350px;
+  height: 370px;
 }

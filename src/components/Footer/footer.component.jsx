@@ -1,12 +1,13 @@
 import React from 'react'
 import './footer.style.css'
+import { Link } from 'react-router-dom'
 export default function Footer() {
   return (
     <div className='footer'>
         <div className='footer_item'>
 <ul className='footer_nav'>
-<li className='footer_nav_item'>Главная</li>
-<li className='footer_nav_item'>Выбор квартиры</li>
+<Link to={'/home'} style={{textDecoration:"none"}}><li className='footer_nav_item'>Главная</li></Link>
+<Link  style={{textDecoration:"none"}} to={"/floors"}><li className='footer_nav_item'>Выбор квартиры</li></Link>
 <li className='footer_nav_item'>Контакты</li>
 
 </ul>
