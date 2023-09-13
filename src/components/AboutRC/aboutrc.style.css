@@ -23,6 +23,8 @@
 .aboutrc_img{
     border-radius: 5px;
     width: 40%;
+    height: 630px;
+    max-height: 670px;
 }
 .about_heading{
     font-size: 40px;

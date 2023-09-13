@@ -29,7 +29,7 @@ export default function AboutRc() {
           Жилой комплекс в сердце нового района «Комарово парк»
         </h1>
 
-    <div style={{display:"flex" , flexWrap:"wrap" }}>
+    <div style={{display:"flex" , flexWrap:"wrap" , height:"500px", maxHeight:"590px"  }}>
     <div className="benefits_cont">
           {benefits.map((el) => (
             <div key={el.id} className="benefit_card" style={fade}>
